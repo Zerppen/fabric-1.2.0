@@ -9,13 +9,13 @@ function downloadImages() {
        echo "==> FABRIC IMAGE: $IMAGES"
        echo
        docker pull hyperledger/fabric-$IMAGES:$FABRIC_TAG
-       docker tag  hyperledger/fabric-$IMAGES:$FABRIC_TAG hyperledger/fabric-$IMAGES:TAG_LATEST
+       docker tag  hyperledger/fabric-$IMAGES:$FABRIC_TAG hyperledger/fabric-$IMAGES:$TAG_LATEST
    done
    for IMAGES in zookeeper kafka couchdb; do
        echo "==> FABRIC IMAGE: $IMAGES"
        echo
        docker pull hyperledger/fabric-$IMAGES:$FABRIC_DEPEND
-        docker tag  hyperledger/fabric-$IMAGES:$FABRIC_DEPEND  hyperledger/fabric-$IMAGES:TAG_LATEST
+        docker tag  hyperledger/fabric-$IMAGES:$FABRIC_DEPEND  hyperledger/fabric-$IMAGES:$TAG_LATEST
    done
 }
 
